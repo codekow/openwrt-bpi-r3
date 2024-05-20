@@ -6,4 +6,4 @@ Banana Pi BPI-R3 OpenWrt Image Builder
 
 ## Links
 
-- https://openwrt.org/docs/guide-user/additional-software/imagebuilder#using_the_image_builder
+- [Docs - Image Builder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder#using_the_image_builder)
