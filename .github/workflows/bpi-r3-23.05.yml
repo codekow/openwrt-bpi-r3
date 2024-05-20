@@ -11,9 +11,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Build Firmware
         run: |
           ./build.sh
+
+      - name: Cache Image Builder
+        uses: actions/cache@v4
+        id: cache-tooling-binaries
+        with:
+          path: |
+            scratch/*.tar.xz
+            scratch/openwrt-imagebuilder-*/dl
+          key: ${{ hashFiles('build.sh packages.txt disabled-services.txt') }}
+
       - name: Release build artifacts
         uses: ncipollo/release-action@v1.14.0
         with:
