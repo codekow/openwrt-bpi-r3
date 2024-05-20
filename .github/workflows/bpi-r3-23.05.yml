@@ -2,7 +2,7 @@ name: Build Banana BPI R3 v23.05.3 Firmware
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 1 * *'
+    - cron: '17 2 1 * *'
 
 jobs:
   build:
