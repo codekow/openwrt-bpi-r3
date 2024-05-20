@@ -1,0 +1,25 @@
+name: Build Banana BPI R3 v23.05.3 Firmware
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build Firmware
+        run: |
+          ./build.sh
+      - name: Release build artifacts
+        uses: ncipollo/release-action@v1.14.0
+        with:
+          allowUpdates: true
+          prerelease: false
+          name: Banana BPI R3 Firmware v23.05.3
+          tag: v23.05.3-${{ env.REVISION }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifacts: scratch/openwrt-imagebuilder-23.05.3-mediatek-filogic.Linux-x86_64/bin/targets/mediatek/filogic/*
