@@ -1,4 +1,4 @@
-name: Build Banana BPI R3 v23.05.3 Firmware
+name: Build Firmware
 on:
   workflow_dispatch:
   schedule:
