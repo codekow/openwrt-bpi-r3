@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '17 2 1 * *'
 
+permissions: write-all
+
 jobs:
   build:
     name: Build
