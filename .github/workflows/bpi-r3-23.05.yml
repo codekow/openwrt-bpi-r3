@@ -23,7 +23,7 @@ jobs:
           path: |
             scratch/*.tar.xz
             scratch/openwrt-imagebuilder-*/dl
-          key: ${{ hashFiles('build.sh packages.txt disabled-services.txt') }}
+          key: ${{ hashFiles('build.sh', 'packages.txt', 'disabled-services.txt') }}
 
       - name: Release build artifacts
         uses: ncipollo/release-action@v1.14.0
