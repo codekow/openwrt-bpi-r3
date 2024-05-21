@@ -1,4 +1,5 @@
 adblock
+att-auth
 banip
 ksmbd
 odhcpd
