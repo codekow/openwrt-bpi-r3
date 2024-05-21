@@ -30,7 +30,6 @@ make_image(){
   rm .profiles.mk; make .profiles.mk
 
   # make info
-  # make image PROFILE=bananapi_bpi-r3 ROOTFS_PARTSIZE="256" PACKAGES="${PACKAGES}" DISABLED_SERVICES="${DISABLED_SERVICES}"
   make image PROFILE=bananapi_bpi-r3 PACKAGES="${PACKAGES}" DISABLED_SERVICES="${DISABLED_SERVICES}"
 
 }
