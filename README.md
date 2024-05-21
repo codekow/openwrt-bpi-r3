@@ -28,12 +28,14 @@ D = SD Card or eMMC connected to CPU's eMMC bus
 
 ## Quick Start
 
-Download [sdcard](https://downloads.openwrt.org/releases/23.05.3/targets/mediatek/filogic/openwrt-23.05.3-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz)
+Download [23.05.3 sdcard](https://downloads.openwrt.org/releases/23.05.3/targets/mediatek/filogic/openwrt-23.05.3-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz)
+
+Write image to SD Card
 
 ```sh
 URL=https://downloads.openwrt.org/releases/23.05.3/targets/mediatek/filogic/openwrt-23.05.3-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz
 
-wget -N "${URL}"
+wget "${URL}"
 gunzip openwrt-*.gz
 
 dd of=/dev/mmcblk0 bs=4k < *-sdcard.img
@@ -73,10 +75,16 @@ resize.f2fs /dev/mmcblk0p66
 # A=0, B=1, C=0, D=0
 ```
 
+## Build Image
+
+```
+./setup.sh
+```
+
 ## Links
 
-- [Docs - Install from OpenWrt](https://openwrt.org/toh/sinovoip/bananapi_bpi-r3)
-- [Docs - Install Old](https://forum.banana-pi.org/t/banana-pi-bpi-r3-openwrt-image/13236/4)
+- [Docs - Install, OpenWrt](https://openwrt.org/toh/sinovoip/bananapi_bpi-r3)
+- [Docs - Install, Old](https://forum.banana-pi.org/t/banana-pi-bpi-r3-openwrt-image/13236/4)
 - [Fix - eMMC resize](https://forum.banana-pi.org/t/bpi-r3-how-to-flash-openwrt-snapshot-on-emmc/14055/5)
 - [Docs - Image Builder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder#using_the_image_builder)
 - [Wiki - BPI-R3](https://wiki.banana-pi.org/Getting_Started_with_BPI-R3)
