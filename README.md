@@ -9,7 +9,7 @@ Banana Pi BPI-R3 OpenWrt Image Builder
 ```
 1 = On, High
 0 = Off, Down
-X = Secondary storage selection
+X = Secondary storage selector
 ```
 
 | Selected Storage | A | B | C | D |
