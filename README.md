@@ -9,7 +9,7 @@ Banana Pi BPI-R3 OpenWrt Image Builder
 ```
 1 = On, High
 0 = Off, Down
-X = 2nd Storage Active
+X = Secondary storage selection
 ```
 
 | Selected Storage | A | B | C | D |
@@ -20,8 +20,8 @@ X = 2nd Storage Active
 | SD   | 1 | 1 | X | 1 |
 
 ```
-A = bootstrap selecting
-B = bootstrap selecting
+A = Select boot storage
+B = Select boot storage
 C = NAND or NOR connected to CPU's SPI bus
 D = SD Card or eMMC connected to CPU's eMMC bus
 ```
