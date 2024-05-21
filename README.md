@@ -6,21 +6,25 @@ Banana Pi BPI-R3 OpenWrt Image Builder
 
 ## Jumper Settings
 
+```
 1 = On, High
 0 = Off, Down
-x = 2nd Storage Active
+X = 2nd Storage Active
+```
 
 | Selected Storage | A | B | C | D |
 |-|-|-|-|-|
-| NOR  | 0 | 0 | 0 | x |
-| NAND | 1 | 0 | 1 | x |
-| eMMC | 0 | 1 | x | 0 |
-| SD   | 1 | 1 | x | 1 |
+| NOR  | 0 | 0 | 0 | X |
+| NAND | 1 | 0 | 1 | X |
+| eMMC | 0 | 1 | X | 0 |
+| SD   | 1 | 1 | X | 1 |
 
-- A = bootstrap selecting
-- B = bootstrap selecting
-- C = NAND or NOR connected to CPU's SPI bus
-- D = SD Card or eMMC connected tp CPU's eMMC bus
+```
+A = bootstrap selecting
+B = bootstrap selecting
+C = NAND or NOR connected to CPU's SPI bus
+D = SD Card or eMMC connected to CPU's eMMC bus
+```
 
 ## Quick Start
 
