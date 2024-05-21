@@ -1,3 +1,5 @@
+-dnsmasq
+-wpad-basic-mbedtls
 aardvark-dns
 adb
 adblock
