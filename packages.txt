@@ -85,6 +85,7 @@ kmod-crypto-sha1
 kmod-crypto-sha256
 kmod-crypto-sha512
 kmod-crypto-user
+kmod-crypto-xts
 kmod-dax
 kmod-dm
 kmod-dummy
