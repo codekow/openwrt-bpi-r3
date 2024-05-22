@@ -74,6 +74,12 @@ resize.f2fs /dev/mmcblk0p66
 # A=0, B=1, C=0, D=0
 ```
 
+Fix `Image check failed: Cannot open file '/etc/opkg/keys`
+
+```sh
+opkg remove ucert
+```
+
 ## Build Custom Image
 
 ```sh
