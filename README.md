@@ -36,9 +36,8 @@ Write image to SD card
 URL=https://downloads.openwrt.org/releases/23.05.3/targets/mediatek/filogic/openwrt-23.05.3-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz
 
 wget "${URL}"
-gunzip openwrt-*.gz
 
-dd of=/dev/mmcblk0 bs=4k < *-sdcard.img
+zcat openwrt-*.gz | sudo dd of=/dev/mmcblk0 bs=4k
 ```
 
 ```sh
