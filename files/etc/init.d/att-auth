@@ -9,7 +9,7 @@ CONF="/etc/EAP/wpa_supplicant.conf"
 start_service(){
   # set -x
   PROC=/usr/sbin/wpa_supplicant
-  INET=br-wan
+  INET=$(uci get network.wan.device)
   ARGS="-dd -D wired -i ${INET} -c ${CONF}"
   
   # wait for interface
