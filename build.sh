@@ -31,7 +31,7 @@ make_image(){
   # fix missing profiles
   rm .profiles.mk; make .profiles.mk
 
-  # make info
+  # make info && exit
   make image PROFILE=bananapi_bpi-r3 PACKAGES="${PACKAGES}" DISABLED_SERVICES="${DISABLED_SERVICES}" FILES="files"
 
 }

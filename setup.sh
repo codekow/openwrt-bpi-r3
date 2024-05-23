@@ -24,7 +24,8 @@ ${DOCKER_CMD} build -t ${IMAGE_NAME} .
 
 # run shell in container
 echo "RUN:
-${DOCKER_CMD} run ${DOCKER_ARG} -u "$(id -u)" --rm -v $(pwd):/build${SELINUX} -it ${IMAGE_NAME} /bin/bash -c ./build.sh
+${DOCKER_CMD} run ${DOCKER_ARG} -u "$(id -u)" --rm -v $(pwd):/build${SELINUX} -it ${IMAGE_NAME} /bin/bash
 "
+sleep 4
 
 ${DOCKER_CMD} run ${DOCKER_ARG} -u "$(id -u)" --rm -v "$(pwd):/build${SELINUX}" -it ${IMAGE_NAME} /bin/bash -c ./build.sh
