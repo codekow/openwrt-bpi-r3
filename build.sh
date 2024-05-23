@@ -12,14 +12,16 @@ prereqs(){
   tar -Jxf "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64.tar.xz"
   mkdir -p "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64"/{tmp,files/etc/config,files/usr/bin}
 
-  # add pigz for faster compression
-  ln -s pigz "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64"/files/usr/bin/gzip
-  ln -s pigz "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64"/files/usr/bin/gunzip
-
   # cp ../files/dockerd openwrt-imagebuilder-*/files/etc/config
   rsync -av ../files/ openwrt-imagebuilder-*/files/
   cp ../packages/*.ipk "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64"/packages/
 
+}
+
+add_pigz(){
+  # add pigz for faster compression
+  ln -s pigz "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64"/files/usr/bin/gzip
+  ln -s pigz "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64"/files/usr/bin/gunzip
 }
 
 make_image(){
@@ -39,4 +41,5 @@ make_image(){
 cd scratch
 
 prereqs
+add_pigz
 make_image
