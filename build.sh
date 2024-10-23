@@ -25,8 +25,8 @@ add_pigz(){
 }
 
 make_image(){
-  cd openwrt-imagebuilder-*/
-  echo "REVISION=$(grep -n "REVISION:=" include/version.mk | tail -c 18)" > ${GITHUB_ENV}
+  cd openwrt-imagebuilder-*/ || exit
+  echo "REVISION=$(grep -n "REVISION:=" include/version.mk | tail -c 18)" > "${GITHUB_ENV}"
 
   # fix missing profiles
   rm .profiles.mk; make .profiles.mk
@@ -38,7 +38,7 @@ make_image(){
 
 # do this in scratch
 [ -d scratch ] || mkdir scratch
-cd scratch
+cd scratch || exit
 
 prereqs
 add_pigz
