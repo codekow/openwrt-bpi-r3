@@ -12,8 +12,6 @@ bind-libs
 blkid
 blockd
 block-mount
-++ b/packages-additional.txt
-++ b/packages.txt
 bridger
 btop
 btrfs-progs

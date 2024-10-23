@@ -1,7 +1,7 @@
 #!/bin/bash
 
 GITHUB_ENV=${GITHUB_ENV:-env}
-PACKAGES=$(tr '\n' ' ' < packages.txt)
+PACKAGES="$(tr '\n' ' ' < packages.txt) $(tr '\n' ' ' < packages-plus.txt)"
 DISABLED_SERVICES=$(tr '\n' ' ' < disabled-services.txt)
 RELEASE=23.05.5
 
