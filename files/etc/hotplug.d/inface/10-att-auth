@@ -1,0 +1,12 @@
+#!/bin/sh
+# shellcheck disable=SC1091,SC3060
+
+[ -n "$DEVICE" ] || exit 0
+
+[ "$INTERFACE" = "wan" ] || exit 0
+[ "$ACTION" = "ifup" ] || exit 0
+
+if [ -x /etc/init.d/att-auth ] && /etc/init.d/att-auth enabled; then
+  logger -t att-auth "Reloading att-auth due to $ACTION of $INTERFACE ($DEVICE)"
+  /etc/init.d/att-auth restart
+fi
