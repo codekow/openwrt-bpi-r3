@@ -9,6 +9,9 @@ fdisk
 file
 fstools
 fstrim
+kmod-fs-btrfs
+kmod-nvme
+kmod-usb3
 kmod-zram
 lsblk
 lvm2
