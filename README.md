@@ -57,7 +57,7 @@ reboot
 ```sh
 # boot from nand, flash emmc
 # A=1, B=0, C=1, D=0
-fw_setenv bootcmd "env default bootcmd ; saveenv ; saveenv ; run emmc_init ; bootmenu 0"
+fw_setenv bootcmd "env default bootcmd ; saveenv ; run emmc_init ; bootmenu 0"
 reboot
 ```
 
