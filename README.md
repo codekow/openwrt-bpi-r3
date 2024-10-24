@@ -91,6 +91,7 @@ opkg remove ucert
 ## Links
 
 - [Buy - Amazon](https://www.amazon.com/gp/product/B0BDG6R41Q)
+- [Docs - Hardware Overview](https://wiki.fw-web.de/doku.php?id=en:bpi-r3:start)
 - [Docs - Install, OpenWrt](https://openwrt.org/toh/sinovoip/bananapi_bpi-r3)
 - [Docs - Install, Old](https://forum.banana-pi.org/t/banana-pi-bpi-r3-openwrt-image/13236/4)
 - [Fix - eMMC resize](https://forum.banana-pi.org/t/bpi-r3-how-to-flash-openwrt-snapshot-on-emmc/14055/5)
