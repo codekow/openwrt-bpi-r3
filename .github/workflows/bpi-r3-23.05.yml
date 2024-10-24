@@ -23,7 +23,7 @@ jobs:
         with:
           allowUpdates: true
           prerelease: false
-          name: Banana BPI R3 Firmware v23.05.3
-          tag: v23.05.3-${{ env.REVISION }}
+          name: Banana BPI R3 Firmware v23.05.5
+          tag: v23.05.5-${{ env.REVISION }}
           token: ${{ secrets.GITHUB_TOKEN }}
-          artifacts: scratch/openwrt-imagebuilder-23.05.3-mediatek-filogic.Linux-x86_64/bin/targets/mediatek/filogic/*
+          artifacts: scratch/openwrt-imagebuilder-23.05.5-mediatek-filogic.Linux-x86_64/bin/targets/mediatek/filogic/*

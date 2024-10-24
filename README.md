@@ -28,12 +28,12 @@ D = SD Card or eMMC connected to CPU's eMMC bus
 
 ## Quick Start
 
-Download [23.05.3 SD card](https://downloads.openwrt.org/releases/23.05.3/targets/mediatek/filogic/openwrt-23.05.3-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz)
+Download [23.05.5 SD card](https://downloads.openwrt.org/releases/23.05.5/targets/mediatek/filogic/openwrt-23.05.5-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz)
 
 Write image to SD card
 
 ```sh
-URL=https://downloads.openwrt.org/releases/23.05.3/targets/mediatek/filogic/openwrt-23.05.3-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz
+URL=https://downloads.openwrt.org/releases/23.05.5/targets/mediatek/filogic/openwrt-23.05.5-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz
 
 wget "${URL}"
 
@@ -45,7 +45,9 @@ zcat openwrt-*.gz | sudo dd of=/dev/mmcblk0 bs=4k
 # A=1, B=1, C=1, D=1
 fw_setenv bootcmd "env default bootcmd ; saveenv ; run ubi_init ; bootmenu 0"
 reboot
+```
 
+```sh
 # boot from sdcard, flash nor
 # A=1, B=1, C=0, D=1
 fw_setenv bootcmd "env default bootcmd ; saveenv ; run nor_init ; bootmenu 0"
@@ -66,7 +68,7 @@ parted /dev/mmcblk0p66
 resize.f2fs /dev/mmcblk0p66
 ```
 
-```sh
+```
 # boot from emmc, w/ nand
 # A=0, B=1, C=1, D=0
 
