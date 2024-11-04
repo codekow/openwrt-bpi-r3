@@ -1,8 +1,8 @@
 name: Build Firmware
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '17 2 1 * *'
+  # schedule:
+  #   - cron: '17 2 1 * *'
 
 permissions: write-all
 
