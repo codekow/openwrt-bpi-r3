@@ -1,4 +1,5 @@
 btop
+conntrack
 cryptsetup
 curl
 e2fsprogs
@@ -14,14 +15,21 @@ kmod-nvme
 kmod-usb3
 kmod-zram
 lsblk
+luci-app-nut
+luci-app-openvpn
+luci-app-wol
+luci-ssl
 lvm2
 lz4
 mkf2fs
 mtd
+nut-driver-dummy-ups
+nut-driver-usbhid-ups
 nvme-cli
 parted
 pigz
 pv
+rsync
 smartmontools
 uboot-envtools
 unzip
