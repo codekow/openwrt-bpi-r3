@@ -31,6 +31,13 @@ make_image(){
   # fix missing profiles
   rm .profiles.mk; make .profiles.mk
 
+  # patch config
+  sed -i '/^CONFIG_TARGET_ROOTFS_PARTSIZE/d' .config
+  # sed -i '/^CONFIG_TARGET_KERNEL_PARTSIZE/d' .config
+
+  echo "CONFIG_TARGET_ROOTFS_PARTSIZE=448" >> .config
+  # echo "CONFIG_TARGET_KERNEL_PARTSIZE=32"  >> .config
+
   # make info && exit
   make image PROFILE=bananapi_bpi-r3 PACKAGES="${PACKAGES}" DISABLED_SERVICES="${DISABLED_SERVICES}" FILES="files"
 
