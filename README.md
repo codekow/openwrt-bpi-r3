@@ -95,6 +95,7 @@ opkg remove ucert
 - [Docs - Install, OpenWrt](https://openwrt.org/toh/sinovoip/bananapi_bpi-r3)
 - [Docs - Install, Old](https://forum.banana-pi.org/t/banana-pi-bpi-r3-openwrt-image/13236/4)
 - [Fix - eMMC resize](https://forum.banana-pi.org/t/bpi-r3-how-to-flash-openwrt-snapshot-on-emmc/14055/5)
+- [Docs - eMMC resize advice](https://forum.banana-pi.org/t/bpi-r3-mini-how-to-extend-emmc-overlayfs/17732/43)
 - [Docs - Image Builder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder#using_the_image_builder)
 - [Wiki - BPI-R3](https://wiki.banana-pi.org/Getting_Started_with_BPI-R3)
 - [Docs - Docker on OpenWrt](https://openwrt.org/docs/guide-user/virtualization/docker_host)
