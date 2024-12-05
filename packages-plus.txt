@@ -1,3 +1,4 @@
+autopart
 btop
 conntrack
 cryptsetup
@@ -33,6 +34,7 @@ rsync
 smartmontools
 uboot-envtools
 unzip
+uvol
 wget-ssl
 zram-swap
 zstd
