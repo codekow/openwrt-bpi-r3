@@ -61,11 +61,27 @@ fw_setenv bootcmd "env default bootcmd ; saveenv ; run emmc_init ; bootmenu 0"
 reboot
 ```
 
+Fix `emmc` size
+
 ```sh
-# fix emmc size
 opkg install parted
-parted /dev/mmcblk0p66
+
+parted /dev/mmcblk0 -- mkpart f2fs 768MiB -34s resizepart 5 768MiB resizepart 4 67.1M resizepart 3 12.6M 
+# say F to fix gpt global size
+reboot
+
+mount /dev/mmcblk0p66 /mnt
+umount /mnt
 resize.f2fs /dev/mmcblk0p66
+# if resize.f2fs fails, a sysupgrade may fix
+```
+
+Use the rest of storage
+
+```sh
+opkg update
+opkg install uvol autopart
+uvol create userdata $(uvol free) rw
 ```
 
 ```
