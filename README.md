@@ -22,7 +22,7 @@ X = Secondary storage selector
 ```
 A = Select boot storage
 B = Select boot storage
-C = NAND or NOR connected to CPU's SPI bus
+C = NAND [1] or NOR [0] connected to CPU's SPI bus
 D = SD Card or eMMC connected to CPU's eMMC bus
 ```
 
