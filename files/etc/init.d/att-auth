@@ -1,27 +1,41 @@
 #!/bin/sh /etc/rc.common
+#shellcheck disable=SC2034,SC2086
 
 START=21
 STOP=90
 USE_PROCD=1
 
-CONF="/etc/EAP/wpa_supplicant.conf"
+NAME=att-auth
+
+get_config(){
+  [ -e /etc/EAP/wpa_supplicant.conf ] && CONF="/etc/EAP/wpa_supplicant.conf"
+  [ -e /etc/att-auth/wpa_supplicant.conf ] && CONF="/etc/att-auth/wpa_supplicant.conf"
+  uci -q get att-auth.conf.default && CONF=$(uci -q get att-auth.conf.default)
+
+  echo "${CONF}"
+}
 
 start_service(){
-  # set -x
+  CONF=$(get_config)
   PROC=/usr/sbin/wpa_supplicant
   INET=$(uci get network.wan.device)
   ARGS="-dd -D wired -i ${INET} -c ${CONF}"
-  
+
+  if [ ! -e "${CONF}" ]; then
+    logger -t "${NAME}" "${CONF:-config} not found"
+    return 1
+  fi  
+
   # wait for interface
-  until [ -e /sys/class/net/${INET} ]
+  until [ -e "/sys/class/net/${INET}" ]
   do
     logger -t "${NAME}" "${INET}: not ready"
     sleep 2
   done
 
-  echo ${PROC} ${ARGS}
+  logger -t "${NAME}" "${PROC} ${ARGS}"
   
   procd_open_instance
-  procd_set_param command ${PROC} -s ${ARGS}
+  procd_set_param command "${PROC}" -s ${ARGS}
   procd_close_instance
 }
