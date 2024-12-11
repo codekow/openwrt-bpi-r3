@@ -11,6 +11,7 @@ fdisk
 file
 fstools
 fstrim
+hostapd-mbedtls
 kmod-fs-btrfs
 kmod-nvme
 kmod-usb3
