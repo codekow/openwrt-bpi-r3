@@ -32,10 +32,10 @@ make_image(){
   rm .profiles.mk; make .profiles.mk
 
   # patch config
-  sed -i '/^CONFIG_TARGET_ROOTFS_PARTSIZE/d' .config
+  # sed -i '/^CONFIG_TARGET_ROOTFS_PARTSIZE/d' .config
   # sed -i '/^CONFIG_TARGET_KERNEL_PARTSIZE/d' .config
 
-  echo "CONFIG_TARGET_ROOTFS_PARTSIZE=835" >> .config
+  # echo "CONFIG_TARGET_ROOTFS_PARTSIZE=448" >> .config
   # echo "CONFIG_TARGET_KERNEL_PARTSIZE=32"  >> .config
 
   # make info && exit
