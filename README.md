@@ -115,3 +115,4 @@ opkg remove ucert
 - [Docs - Image Builder](https://openwrt.org/docs/guide-user/additional-software/imagebuilder#using_the_image_builder)
 - [Wiki - BPI-R3](https://wiki.banana-pi.org/Getting_Started_with_BPI-R3)
 - [Docs - Docker on OpenWrt](https://openwrt.org/docs/guide-user/virtualization/docker_host)
+- [Issue - Fan Control](https://github.com/openwrt/openwrt/pull/16962)
