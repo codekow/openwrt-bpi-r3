@@ -18,10 +18,12 @@ kmod-nvme
 kmod-usb3
 kmod-zram
 lsblk
+luci-app-attendedsysupgrade
 luci-app-ddns
 luci-app-https-dns-proxy
 luci-app-nut
 luci-app-openvpn
+luci-app-statistics
 luci-app-wol
 luci-proto-wireguard
 luci-ssl
