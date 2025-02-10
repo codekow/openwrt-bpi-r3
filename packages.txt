@@ -1,5 +1,6 @@
 -dnsmasq
 -wpad-basic-mbedtls
+-libustream-mbedtls
 base-files
 busybox
 ca-bundle
@@ -22,7 +23,6 @@ kmod-sfp
 kmod-usb3
 libc
 libgcc
-libustream-mbedtls
 logd
 luci
 mkf2fs
@@ -43,4 +43,4 @@ uci
 uclient-fetch
 urandom-seed
 urngd
-wpa-supplicant
+wpad-wolfssl
