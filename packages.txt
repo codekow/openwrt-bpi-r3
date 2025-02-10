@@ -10,6 +10,7 @@ e2fsprogs
 f2fsck
 firewall4
 fstools
+hostapd-openssl
 kmod-crypto-hw-safexcel
 kmod-gpio-button-hotplug
 kmod-hwmon-pwmfan
@@ -43,4 +44,4 @@ uci
 uclient-fetch
 urandom-seed
 urngd
-wpad-wolfssl
+wpa-supplicant

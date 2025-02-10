@@ -33,6 +33,7 @@ mtd
 nut-driver-dummy-ups
 nut-driver-usbhid-ups
 nvme-cli
+openvpn-openssl
 parted
 pbr
 pigz
