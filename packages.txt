@@ -2,7 +2,6 @@
 -wpad-basic-mbedtls
 -libustream-mbedtls
 base-files
-busybox
 ca-bundle
 dnsmasq-full
 dropbear

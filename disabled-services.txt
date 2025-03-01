@@ -2,6 +2,7 @@ adblock
 att-auth
 banip
 ksmbd
+nut-server
 odhcpd
 radius
 tor
