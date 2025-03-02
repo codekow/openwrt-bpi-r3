@@ -40,6 +40,7 @@ pigz
 pv
 rsync
 smartmontools
+speedtestcpp
 uboot-envtools
 unzip
 uvol
