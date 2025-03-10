@@ -1,6 +1,5 @@
 -dnsmasq
 -wpad-basic-mbedtls
--libustream-mbedtls
 base-files
 ca-bundle
 dnsmasq-full

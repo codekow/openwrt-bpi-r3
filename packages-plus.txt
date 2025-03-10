@@ -47,3 +47,4 @@ uvol
 wget-ssl
 zram-swap
 zstd
+wireguard-tools
