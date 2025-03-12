@@ -1,7 +1,6 @@
 -dnsmasq
 -wpad-basic-mbedtls
 base-files
-busybox
 ca-bundle
 dnsmasq-full
 dropbear
@@ -9,6 +8,7 @@ e2fsprogs
 f2fsck
 firewall4
 fstools
+hostapd-openssl
 kmod-crypto-hw-safexcel
 kmod-gpio-button-hotplug
 kmod-hwmon-pwmfan
@@ -22,7 +22,6 @@ kmod-sfp
 kmod-usb3
 libc
 libgcc
-libustream-mbedtls
 logd
 luci
 mkf2fs

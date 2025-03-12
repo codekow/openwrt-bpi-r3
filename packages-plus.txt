@@ -11,7 +11,6 @@ fdisk
 file
 fstools
 fstrim
-hostapd-openssl
 https-dns-proxy
 kmod-fs-btrfs
 kmod-nvme
@@ -34,15 +33,18 @@ mtd
 nut-driver-dummy-ups
 nut-driver-usbhid-ups
 nvme-cli
+openvpn-openssl
 parted
 pbr
 pigz
 pv
 rsync
 smartmontools
+speedtestcpp
 uboot-envtools
 unzip
 uvol
 wget-ssl
+wireguard-tools
 zram-swap
 zstd

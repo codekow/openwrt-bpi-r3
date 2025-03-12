@@ -1,15 +1,19 @@
 #!/bin/bash
 
+# source env file if it exists
+# shellcheck source=/dev/null
+[ -e env ] && . env
+
 GITHUB_ENV=${GITHUB_ENV:-env}
 PACKAGES="$(tr '\n' ' ' < packages.txt) $(tr '\n' ' ' < packages-plus.txt)"
 DISABLED_SERVICES=$(tr '\n' ' ' < disabled-services.txt)
-RELEASE=23.05.5
+RELEASE=${RELEASE:-24.10.0}
 
 prereqs(){
   
-  wget -N "https://downloads.openwrt.org/releases/${RELEASE}/targets/mediatek/filogic/openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64.tar.xz"
+  wget -N "https://downloads.openwrt.org/releases/${RELEASE}/targets/mediatek/filogic/openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64.tar.zst"
   
-  tar -Jxf "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64.tar.xz"
+  tar --zstd -xf "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64.tar.zst"
   mkdir -p "openwrt-imagebuilder-${RELEASE}-mediatek-filogic.Linux-x86_64"/{tmp,files/etc/config,files/usr/bin}
 
   # cp ../files/dockerd openwrt-imagebuilder-*/files/etc/config
@@ -50,3 +54,5 @@ cd scratch || exit
 prereqs
 add_pigz
 make_image
+
+# look in scratch/openwrt-imagebuilder-*/bin/targets/mediatek/filogic
