@@ -2,7 +2,7 @@
 
 Banana Pi BPI-R3 OpenWrt Image Builder
 
-[![Build Firmware](https://github.com/codekow/bpi-r3-openwrt/actions/workflows/bpi-r3-23.05.yml/badge.svg)](https://github.com/codekow/bpi-r3-openwrt/actions/workflows/bpi-r3-23.05.yml)
+[![Build Firmware](https://github.com/codekow/bpi-r3-openwrt/actions/workflows/bpi-r3-24.10.yml/badge.svg)](https://github.com/codekow/bpi-r3-openwrt/actions/workflows/bpi-r3-24.10.yml)
 
 ## Jumper Settings
 
