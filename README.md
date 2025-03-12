@@ -61,13 +61,15 @@ fw_setenv bootcmd "env default bootcmd ; saveenv ; run emmc_init ; bootmenu 0"
 reboot
 ```
 
-Fix `emmc` size
+Fix `emmc` size on 23.05.x
 
 ```sh
 opkg install parted
 
-parted /dev/mmcblk0 -- mkpart f2fs 768MiB -34s resizepart 5 768MiB resizepart 4 67.1M resizepart 3 12.6M 
 # say F to fix gpt global size
+parted /dev/mmcblk0
+
+parted /dev/mmcblk0 -- mkpart f2fs 768MiB -34s resizepart 5 768MiB resizepart 4 67.1M resizepart 3 12.6M 
 reboot
 
 mount /dev/mmcblk0p66 /mnt

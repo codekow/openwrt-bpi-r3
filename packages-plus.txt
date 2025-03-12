@@ -45,6 +45,6 @@ uboot-envtools
 unzip
 uvol
 wget-ssl
+wireguard-tools
 zram-swap
 zstd
-wireguard-tools
