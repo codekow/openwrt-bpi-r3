@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # source env file if it exists
+# shellcheck source=/dev/null
 [ -e env ] && . env
 
 GITHUB_ENV=${GITHUB_ENV:-env}
