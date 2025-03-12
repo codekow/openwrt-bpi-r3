@@ -28,12 +28,12 @@ D = SD Card or eMMC connected to CPU's eMMC bus
 
 ## Quick Start
 
-Download [23.05.5 SD card](https://downloads.openwrt.org/releases/23.05.5/targets/mediatek/filogic/openwrt-23.05.5-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz)
+Download [24.10.0 SD card](https://downloads.openwrt.org/releases/24.10.0/targets/mediatek/filogic/openwrt-24.10.0-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz)
 
 Write image to SD card
 
 ```sh
-URL=https://downloads.openwrt.org/releases/23.05.5/targets/mediatek/filogic/openwrt-23.05.5-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz
+URL=https://downloads.openwrt.org/releases/24.10.0/targets/mediatek/filogic/openwrt-24.10.0-mediatek-filogic-bananapi_bpi-r3-sdcard.img.gz
 
 wget "${URL}"
 
