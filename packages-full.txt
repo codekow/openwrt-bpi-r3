@@ -485,7 +485,6 @@ gawk
 grep
 sed
 coreutils-sort
-unzip
 tang
 luci-proto-modemmanager
 luci-proto-3g
