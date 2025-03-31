@@ -488,3 +488,5 @@ coreutils-sort
 tang
 luci-proto-modemmanager
 luci-proto-3g
+diffutils
+luci-app-banip
