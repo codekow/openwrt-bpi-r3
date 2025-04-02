@@ -490,3 +490,4 @@ luci-proto-modemmanager
 luci-proto-3g
 diffutils
 luci-app-banip
+luci-app-watchcat
